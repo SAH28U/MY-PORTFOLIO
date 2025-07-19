@@ -27,7 +27,10 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault();
             
             const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
             const targetElement = document.querySelector(targetId);
+            if (!targetElement) return;
             
             window.scrollTo({
                 top: targetElement.offsetTop - 80,
@@ -53,22 +56,19 @@ document.addEventListener('DOMContentLoaded', function() {
             const level = skill.getAttribute('data-level');
             const skillLevel = skill.querySelector('.skill-level');
             
-            // Only animate if the skill is in view
-            if (isElementInViewport(skill)) {
+            if (level && isElementInViewport(skill)) {
                 skillLevel.style.width = `${level}%`;
                 skill.removeAttribute('data-level'); // Prevent re-animation
             }
         });
     }
     
-    // Check if element is in viewport
+    // Check if element is in viewport (simplified version)
     function isElementInViewport(el) {
         const rect = el.getBoundingClientRect();
         return (
-            rect.top >= 0 &&
-            rect.left >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.bottom >= 0
         );
     }
     
@@ -80,30 +80,38 @@ document.addEventListener('DOMContentLoaded', function() {
     const filterButtons = document.querySelectorAll('.filter-btn');
     const projectsGrid = document.querySelector('.projects-grid');
     
-    // Sample project data - replace with your actual projects
+    // Corrected project data structure
     const projects = [
         {
             title: "E-commerce Website",
             description: "Full-stack e-commerce site with angular frontend and Node.js backend with MySQL.",
-            tags: ["JavaScript", "HTML", "CSS","JSON" ],
+            tags: ["JavaScript", "HTML", "CSS", "JSON"],
             category: "Web",
-
+            demoUrl: "https://sah28u.github.io/NyathiClothingXpress/",
+            codeUrl: "https://github.com/SAH28U/NyathiClothingXpress"
+        },
+        {
             title: "To-Do NotePad",
             description: "A lightweight, browser-based task manager built with HTML, CSS & JavaScript.",
             tags: ["JavaScript", "HTML", "CSS"],
             category: "Web",
-            
-        },
- 
+            demoUrl: "https://sah28u.github.io/To-Do-NotePad/",
+            codeUrl: "https://github.com/SAH28U/To-Do-NotePad"
+        }
     ];
     
     // Display projects
     function displayProjects(filter = 'all') {
-        projectsGrid.innerHTML = '  ';
+        projectsGrid.innerHTML = '';
         
         const filteredProjects = filter === 'all' 
             ? projects 
             : projects.filter(project => project.category === filter);
+        
+        if (filteredProjects.length === 0) {
+            projectsGrid.innerHTML = '<p class="no-projects">No projects found in this category.</p>';
+            return;
+        }
         
         filteredProjects.forEach(project => {
             const projectItem = document.createElement('div');
@@ -118,14 +126,12 @@ document.addEventListener('DOMContentLoaded', function() {
                         ${project.tags.map(tag => `<span class="project-tag">${tag}</span>`).join('')}
                     </div>
                     <div class="project-links">
-                        <a href="https://sah28u.github.io/NyathiClothingXpress/"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                        <a href="https://github.com/SAH28U/NyathiClothingXpress"><i class="fab fa-github"></i> Source Code</a>
-                    </div>
-                </div>
-                </div>
-                    <div class="project-links">
-                        <a href="https://sah28u.github.io/To-Do-NotePad/"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                        <a href="https://sah28u.github.io/To-Do-NotePad/"><i class="fab fa-github"></i> Source Code</a>
+                        <a href="${project.demoUrl}" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
+                        <a href="${project.codeUrl}" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i> Source Code
+                        </a>
                     </div>
                 </div>
             `;
@@ -153,13 +159,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // Back to top button
     const backToTop = document.querySelector('.back-to-top');
     
-    window.addEventListener('scroll', () => {
-        if (window.pageYOffset > 300) {
-            backToTop.style.display = 'flex';
-        } else {
-            backToTop.style.display = 'none';
-        }
-    });
+    function toggleBackToTop() {
+        backToTop.style.display = window.pageYOffset > 300 ? 'flex' : 'none';
+    }
+    
+    window.addEventListener('scroll', toggleBackToTop);
+    toggleBackToTop(); // Initialize on load
     
     backToTop.addEventListener('click', (e) => {
         e.preventDefault();
@@ -172,23 +177,26 @@ document.addEventListener('DOMContentLoaded', function() {
     // Form submission
     const contactForm = document.querySelector('.contact-form');
     
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        // Here you would typically send the form data to a server
-        // For this example, we'll just show an alert
-        alert('Thank you for your message! I will get back to you soon.');
-        contactForm.reset();
-    });
+    if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Here you would typically send the form data to a server
+            // For this example, we'll just show an alert
+            alert('Thank you for your message! I will get back to you soon.');
+            contactForm.reset();
+        });
+    }
     
     // Sticky header on scroll
     const header = document.querySelector('header');
     
-    window.addEventListener('scroll', () => {
-        if (window.pageYOffset > 100) {
-            header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
-        } else {
-            header.style.boxShadow = 'none';
-        }
-    });
+    function updateHeaderShadow() {
+        header.style.boxShadow = window.pageYOffset > 100 
+            ? '0 2px 10px rgba(0, 0, 0, 0.1)' 
+            : 'none';
+    }
+    
+    window.addEventListener('scroll', updateHeaderShadow);
+    updateHeaderShadow(); // Initialize on load
 });
