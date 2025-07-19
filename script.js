@@ -87,6 +87,11 @@ document.addEventListener('DOMContentLoaded', function() {
             description: "Full-stack e-commerce site with angular frontend and Node.js backend with MySQL.",
             tags: ["JavaScript", "HTML", "CSS","JSON" ],
             category: "Web",
+
+            title: "To-Do NotePad",
+            description: "A lightweight, browser-based task manager built with HTML, CSS & JavaScript.",
+            tags: ["JavaScript", "HTML", "CSS"],
+            category: "Web",
             
         },
  
@@ -115,6 +120,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div class="project-links">
                         <a href="https://sah28u.github.io/NyathiClothingXpress/"><i class="fas fa-external-link-alt"></i> Live Demo</a>
                         <a href="https://github.com/SAH28U/NyathiClothingXpress"><i class="fab fa-github"></i> Source Code</a>
+                    </div>
+                </div>
+                </div>
+                    <div class="project-links">
+                        <a href="https://sah28u.github.io/To-Do-NotePad/"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        <a href="https://sah28u.github.io/To-Do-NotePad/"><i class="fab fa-github"></i> Source Code</a>
                     </div>
                 </div>
             `;
