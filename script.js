@@ -58,12 +58,11 @@ document.addEventListener('DOMContentLoaded', function() {
             
             if (level && isElementInViewport(skill)) {
                 skillLevel.style.width = `${level}%`;
-                skill.removeAttribute('data-level'); // Prevent re-animation
+                skill.removeAttribute('data-level');
             }
         });
     }
     
-    // Check if element is in viewport (simplified version)
     function isElementInViewport(el) {
         const rect = el.getBoundingClientRect();
         return (
@@ -72,7 +71,6 @@ document.addEventListener('DOMContentLoaded', function() {
         );
     }
     
-    // Run on scroll and initial load
     window.addEventListener('scroll', animateSkills);
     animateSkills();
     
@@ -80,18 +78,18 @@ document.addEventListener('DOMContentLoaded', function() {
     const filterButtons = document.querySelectorAll('.filter-btn');
     const projectsGrid = document.querySelector('.projects-grid');
     
-    // Corrected project data structure
+    // Project Data
     const projects = [
         {
             title: "E-commerce Website",
-            description: "Full-stack e-commerce site with angular frontend and Node.js backend with MySQL.",
-            tags: ["JavaScript", "HTML", "CSS", "JSON"],
+            description: "Full-stack e-commerce site with Angular frontend and Node.js backend with MySQL.",
+            tags: ["JavaScript", "HTML", "CSS", "JSON", "Angular", "Node.js"],
             category: "Web",
             demoUrl: "https://sah28u.github.io/NyathiClothingXpress/",
             codeUrl: "https://github.com/SAH28U/NyathiClothingXpress"
         },
         {
-            title: "To-Do NotePad",
+            title: "To-Do Notepad",
             description: "A lightweight, browser-based task manager built with HTML, CSS & JavaScript.",
             tags: ["JavaScript", "HTML", "CSS"],
             category: "Web",
@@ -100,7 +98,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     ];
     
-    // Display projects
     function displayProjects(filter = 'all') {
         projectsGrid.innerHTML = '';
         
@@ -140,20 +137,14 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Filter projects
     filterButtons.forEach(button => {
         button.addEventListener('click', () => {
-            // Update active button
             filterButtons.forEach(btn => btn.classList.remove('active'));
             button.classList.add('active');
-            
-            // Filter projects
-            const filter = button.getAttribute('data-filter');
-            displayProjects(filter);
+            displayProjects(button.getAttribute('data-filter'));
         });
     });
     
-    // Initialize with all projects
     displayProjects();
     
     // Back to top button
@@ -164,14 +155,11 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     window.addEventListener('scroll', toggleBackToTop);
-    toggleBackToTop(); // Initialize on load
+    toggleBackToTop();
     
     backToTop.addEventListener('click', (e) => {
         e.preventDefault();
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     });
     
     // Form submission
@@ -180,15 +168,12 @@ document.addEventListener('DOMContentLoaded', function() {
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            
-            // Here you would typically send the form data to a server
-            // For this example, we'll just show an alert
             alert('Thank you for your message! I will get back to you soon.');
             contactForm.reset();
         });
     }
     
-    // Sticky header on scroll
+    // Sticky header
     const header = document.querySelector('header');
     
     function updateHeaderShadow() {
@@ -198,5 +183,5 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     window.addEventListener('scroll', updateHeaderShadow);
-    updateHeaderShadow(); // Initialize on load
+    updateHeaderShadow();
 });
