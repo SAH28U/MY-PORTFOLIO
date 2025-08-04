@@ -174,19 +174,20 @@ document.addEventListener('DOMContentLoaded', function() {
     observer.observe(skillsSection);
 
     // Circle Progress Animation
-    const circleProgresses = document.querySelectorAll('.circle-progress svg circle:nth-child(2)');
+    const circleProgresses = document.querySelectorAll('.circle-progress');
     
     circleProgresses.forEach(circle => {
-        const value = circle.parentElement.getAttribute('data-value');
-        const radius = circle.r.baseVal.value;
+        const value = circle.getAttribute('data-value');
+        const circles = circle.querySelectorAll('circle');
+        const radius = circles[0].r.baseVal.value;
         const circumference = 2 * Math.PI * radius;
         const offset = circumference - (value / 100) * circumference;
         
-        circle.style.strokeDasharray = circumference;
-        circle.style.strokeDashoffset = circumference;
+        circles[1].style.strokeDasharray = circumference;
+        circles[1].style.strokeDashoffset = circumference;
         
         setTimeout(() => {
-            circle.style.strokeDashoffset = offset;
+            circles[1].style.strokeDashoffset = offset;
         }, 500);
     });
 
