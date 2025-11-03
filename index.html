@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sandile Nyathi | Full Stack Developer & Cloud Specialist</title>
+    <meta name="description" content="Sandile Nyathi - Full Stack Developer & Cloud Specialist specializing in web development, mobile applications, and cloud solutions.">
+    <meta name="keywords" content="full stack developer, cloud specialist, web development, mobile apps, JavaScript, Angular, Java, C#, HTML5, CSS3">
+    <meta name="author" content="Sandile Nyathi">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Sandile Nyathi | Full Stack Developer & Cloud Specialist">
+    <meta property="og:description" content="Full Stack Developer specializing in web development, mobile applications, and cloud solutions.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sandilenyathi.com">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- External Libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Cursor Effect -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">
+                    <i class="fas fa-code"></i> SN<span>.</span>
+                </a>
+                
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                
+                <ul class="nav-links">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h4 class="subtitle animate__animated animate__fadeInUp">Hi, my name is</h4>
+                <h1 class="title animate__animated animate__fadeInUp animate__delay-1s">Sandile Nyathi</h1>
+                <h2 class="role animate__animated animate__fadeInUp animate__delay-2s">I build things for the Web & Mobile</h2>
+                <p class="description animate__animated animate__fadeInUp animate__delay-3s">
+                   I'm a full-stack developer specializing in building exceptional digital experiences, currently focused on Website, Applications creation and cloud solutions. 
+                   Also skilled as a Software Engineer and Systems Developer, as well as a Project Analyst and Co-ordinator.
+                </p>
+                <div class="hero-cta animate__animated animate__fadeInUp animate__delay-4s">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-outline">Contact Me</a>
+                </div>
+            </div>
+            
+            <div class="hero-image">
+                <div class="image-wrapper">
+                    <img src="MR. NYATHI.jpg" alt="Sandile Nyathi" class="profile-img">
+                    <div class="tech-icons">
+                        <i class="fab fa-html5" style="--i:0"></i>
+                        <i class="fab fa-css3-alt" style="--i:1"></i>
+                        <i class="fab fa-js" style="--i:2"></i>
+                        <i class="fab fa-angular" style="--i:3"></i>
+                        <i class="fab fa-java" style="--i:4"></i>
+                        <i class="fas fa-cloud" style="--i:5"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <span>Scroll down</span>
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <span class="section-subtitle">Who I am</span>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="MR. NYATHI.jpg" alt="About Sandile Nyathi" class="about-img">
+                </div>
+                
+                <div class="about-info">
+                    <h3 class="about-title">I'm Sandile Nyathi, a Full Stack Developer & Cloud Specialist</h3>
+                    <p class="about-text">
+                        Results-driven Software Developer currently leading projects at House of Grace as Project Lead Developer. 
+                        I specialize in full-stack web and mobile application development, with expertise in cloud infrastructure 
+                        backed by CompTIA Cloud+, A+, and Security+ certifications.
+                    </p>
+                    <p class="about-text">
+                        My technical stack includes Java, C#, JavaScript, Angular, and mobile development. 
+                        I combine technical proficiency with strong problem-solving skills to deliver high-quality solutions 
+                        that streamline processes and enhance user experiences.
+                    </p>
+                    <p class="about-text">
+                        Available for immediate opportunities where I can contribute innovative solutions and technical expertise 
+                        to build impactful digital experiences.
+                    </p>
+                    
+                    <div class="about-tabs">
+                        <button class="tab-btn active" data-tab="education">Education</button>
+                        <button class="tab-btn" data-tab="experience">Experience</button>
+                        <button class="tab-btn" data-tab="certifications">Certifications</button>
+                    </div>
+                    
+                    <div class="tab-content active" data-tab="education">
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-date">2022 - 2025</div>
+                                <h4 class="timeline-title">Diploma in Information Technology</h4>
+                                <p class="timeline-text">Richfield Graduate Institute of Technology</p>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-date">2024 - 2025</div>
+                                <h4 class="timeline-title">Online Learning</h4>
+                                <p class="timeline-text">Alison & SoloLearn</p>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-date">2016 - 2021</div>
+                                <h4 class="timeline-title">High School</h4>
+                                <p class="timeline-text">Brakpan Education Centre</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" data-tab="experience">
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-date">Apr - Sep 2025</div>
+                                <h4 class="timeline-title">Project Lead Developer</h4>
+                                <p class="timeline-text">House of Grace (Property Consortium)</p>
+                                <p class="timeline-details">
+                                    Providing consultations and leading key responsibilities on web and applicational developments. 
+                                    Maintaining existing web and app developments. Populating and providing key business points from an IT development perspective. 
+                                    Laising with Owners on cost-effective methods on existing projects and future projects.
+                                </p>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-date">Jan - Mar 2025</div>
+                                <h4 class="timeline-title">Call Centre Agent (WIL)</h4>
+                                <p class="timeline-text">Richfield Graduate Institute of Technology</p>
+                                <p class="timeline-details">
+                                    Conducted outbound calls to existing students, reminding them of outstanding balances and providing guidance on payment procedures. 
+                                    Engaged with students regarding articulation opportunities, offering clear explanations about available campus programs and pathways.
+                                </p>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-date">2023 - Present</div>
+                                <h4 class="timeline-title">Freelance Developer</h4>
+                                <p class="timeline-text">Building Websites and solutions for clients</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" data-tab="certifications">
+                        <ul class="certification-list">
+                            <li>CompTIA Cloud+</li>
+                            <li>CompTIA A+</li>
+                            <li>CompTIA Security+</li>
+                            <li>Diploma in Information Technology</li>
+                            <li>Angular Certification</li>
+                            <li>C# Certification</li>
+                            <li>SQL Certification</li>
+                            <li>SEO with AI</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="download-buttons">
+                        <a href="MR S S NYATHI CV.pdf" class="btn btn-primary download-cv" download="Sandile-Nyathi-CV.pdf">
+                            <i class="fas fa-download"></i> Download My CV
+                        </a>
+                        <a href="All Qualifications.pdf" class="btn btn-primary download-Qualifications" download="Sandile-Nyathi-Qualifications.pdf">
+                            <i class="fas fa-download"></i> Download My Certifications
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">My Services</h2>
+                <span class="section-subtitle">What I offer</span>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="service-title">Web Development</h3>
+                    <p class="service-description">
+                        Custom web applications built with modern technologies like Angular. 
+                        Responsive design and optimized performance.
+                    </p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3 class="service-title">Cloud Solutions</h3>
+                    <p class="service-description">
+                        Cloud infrastructure setup, deployment, and management. 
+                        Expertise in cloud security, scalability, and cost optimization.
+                    </p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="service-title">Mobile Development</h3>
+                    <p class="service-description">
+                        Cross-platform mobile applications using modern frameworks. 
+                        Native-like performance with responsive design.
+                    </p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3 class="service-title">Database Design</h3>
+                    <p class="service-description">
+                        Efficient database architecture and optimization. 
+                        SQL solutions tailored to your application needs.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">My Skills</h2>
+                <span class="section-subtitle">What I know</span>
+            </div>
+            
+            <div class="skills-content">
+                <div class="skills-left">
+                    <h3 class="skills-title">Technical Skills</h3>
+                    <p class="skills-text">
+                        I've worked with a variety of technologies in the web development world. 
+                        From front-end to back-end, I'm constantly learning and improving my skills.
+                    </p>
+                    
+                    <div class="skills-bars">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>HTML5</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="95"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>CSS3</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>JavaScript</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Angular</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="75"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Java</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>C#</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="70"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skills-right">
+                    <h3 class="skills-title">Professional Skills</h3>
+                    <p class="skills-text">
+                        Beyond technical abilities, I bring strong problem-solving skills, teamwork, 
+                        and a commitment to continuous learning to every project.
+                    </p>
+                    
+                    <div class="professional-skills">
+                        <div class="skill-circle">
+                            <div class="circle-progress" data-value="90">
+                                <svg width="120" height="120">
+                                    <circle cx="60" cy="60" r="50"></circle>
+                                    <circle cx="60" cy="60" r="50"></circle>
+                                </svg>
+                                <span class="circle-value">90%</span>
+                            </div>
+                            <h4 class="circle-title">Problem Solving</h4>
+                        </div>
+                        
+                        <div class="skill-circle">
+                            <div class="circle-progress" data-value="85">
+                                <svg width="120" height="120">
+                                    <circle cx="60" cy="60" r="50"></circle>
+                                    <circle cx="60" cy="60" r="50"></circle>
+                                </svg>
+                                <span class="circle-value">85%</span>
+                            </div>
+                            <h4 class="circle-title">Teamwork</h4>
+                        </div>
+                        
+                        <div class="skill-circle">
+                            <div class="circle-progress" data-value="95">
+                                <svg width="120" height="120">
+                                    <circle cx="60" cy="60" r="50"></circle>
+                                    <circle cx="60" cy="60" r="50"></circle>
+                                </svg>
+                                <span class="circle-value">95%</span>
+                            </div>
+                            <h4 class="circle-title">Learning</h4>
+                        </div>
+                        
+                        <div class="skill-circle">
+                            <div class="circle-progress" data-value="80">
+                                <svg width="120" height="120">
+                                    <circle cx="60" cy="60" r="50"></circle>
+                                    <circle cx="60" cy="60" r="50"></circle>
+                                </svg>
+                                <span class="circle-value">80%</span>
+                            </div>
+                            <h4 class="circle-title">Communication</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="skills-cloud">
+                <div class="cloud-tag" style="--i:1">HTML5</div>
+                <div class="cloud-tag" style="--i:2">CSS3</div>
+                <div class="cloud-tag" style="--i:3">JavaScript</div>
+                <div class="cloud-tag" style="--i:4">Angular</div>
+                <div class="cloud-tag" style="--i:5">Java</div>
+                <div class="cloud-tag" style="--i:6">C#</div>
+                <div class="cloud-tag" style="--i:7">MySQL</div>
+                <div class="cloud-tag" style="--i:8">Git</div>
+                <div class="cloud-tag" style="--i:9">Cloud+</div>
+                <div class="cloud-tag" style="--i:10">Security+</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">My Projects</h2>
+                <span class="section-subtitle">What I've built</span>
+            </div>
+            
+            <div class="project-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="app">Applications</button>
+                <button class="filter-btn" data-filter="cloud">Cloud</button>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <img src="SHOP.PNG" alt="E-commerce Website">
+                        <div class="project-overlay">
+                            <a href="https://sah28u.github.io/NyathiClothingXpress/" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">E-commerce Website</h3>
+                        <p class="project-description">
+                            Full-stack e-commerce site with Angular frontend and backend with MySQL.
+                        </p>
+                        <div class="project-tech">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JAVASCRIPT</span>
+                            <span>ANGULAR</span>
+                            <span>MySQL</span>                        
+                        </div>
+                        <div class="project-links">
+                            <a href="https://sah28u.github.io/NyathiClothingXpress/" target="_blank" class="btn btn-small">
+                                <i class="fas fa-eye"></i> Demo
+                            </a>
+                            <a href="https://github.com/SAH28U/NyathiClothingXpress" target="_blank" class="btn btn-small btn-outline">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <img src="da.PNG" alt="Church Website">
+                        <div class="project-overlay">
+                            <a href="https://sah28u.github.io/Temple-Of-Faith/" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Church Website</h3>
+                        <p class="project-description">
+                            Responsive church website with event calendar and sermon library.
+                        </p>
+                        <div class="project-tech">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JAVASCRIPT</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://sah28u.github.io/Temple-Of-Faith/" target="_blank" class="btn btn-small">
+                                <i class="fas fa-eye"></i> Demo
+                            </a>
+                            <a href="https://github.com/SAH28U/Temple-Of-Faith" target="_blank" class="btn btn-small btn-outline">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <img src="scoo.jpeg" alt="School Website">
+                        <div class="project-overlay">
+                            <a href="https://sah28u.github.io/Brakpan-Educational-Centre/" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">School Website</h3>
+                        <p class="project-description">
+                            Educational institution website with student portal, course catalog.
+                        </p>
+                        <div class="project-tech">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JAVASCRIPT</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://sah28u.github.io/Brakpan-Educational-Centre/" target="_blank" class="btn btn-small">
+                                <i class="fas fa-eye"></i> Demo
+                            </a>
+                            <a href="https://github.com/SAH28U/Brakpan-Educational-Centre" target="_blank" class="btn btn-small btn-outline">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <img src="NOTTT.PNG" alt="To-Do Notepad">
+                        <div class="project-overlay">
+                            <a href="https://sah28u.github.io/To-Do-NotePad/" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">To-Do Notepad</h3>
+                        <p class="project-description">
+                            A lightweight, browser-based task manager built with HTML, CSS & JavaScript.
+                        </p>
+                        <div class="project-tech">
+                            <span>JavaScript</span>
+                            <span>HTML</span>
+                            <span>CSS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://sah28u.github.io/To-Do-NotePad/" target="_blank" class="btn btn-small">
+                                <i class="fas fa-eye"></i> Demo
+                            </a>
+                            <a href="https://github.com/SAH28U/To-Do-NotePad" target="_blank" class="btn btn-small btn-outline">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                </div>
+            </div>
+            
+            <div class="github-stats">
+                <div class="github-card">
+                    <i class="fab fa-github"></i>
+                    <h3>My GitHub Activity</h3>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="5">0</span>
+                            <span class="stat-label">Repositories</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="5">0</span>
+                            <span class="stat-label">Commits</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="5">0</span>
+                            <span class="stat-label">Projects</span>
+                        </div>
+                    </div>
+                    <a href="https://github.com/SAH28U" target="_blank" class="btn btn-outline">
+                        <i class="fab fa-github"></i> View Profile
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Testimonials</h2>
+                <span class="section-subtitle">What clients say</span>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        "Sandile delivered an exceptional e-commerce solution for our business. His attention to detail and technical expertise exceeded our expectations."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="MAL.jpg" alt="Client">
+                        </div>
+                        <div class="author-info">
+                            <h4>Mr. S.S NYATHI</h4>
+                            <p>Founder, Fashion Retail</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        "Working with Sandile was a great experience. He transformed our complex requirements into a user-friendly application with excellent performance."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="FMAL.jpg" alt="Client">
+                        </div>
+                        <div class="author-info">
+                            <h4>Mr & Mrs NYATHI</h4>
+                            <p>Founders, Property Consortium</p>
+                        </div>
+                    </div>
+                </div>
+                
+<div class="testimonial-card">
+    <div class="testimonial-content">
+        "Sandile delivered an exceptional website for our church that perfectly captures our mission and values. 
+        His attention to detail and technical expertise transformed our online presence. 
+        The site is not only visually appealing but also highly functional, making it easy for our congregation to stay connected and access resources. 
+        His professionalism and commitment to excellence made the entire process seamless."
+    </div>
+    <div class="testimonial-author">
+        <div class="author-avatar">
+            <img src="FMAL.jpg" alt="Mr T.E Twala">
+        </div>
+        <div class="author-info">
+            <h4>Mr T.E TWALA</h4>
+            <p>Founder & Owner, Community Church</p>
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <span class="section-subtitle">Contact me</span>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3 class="contact-title">Let's talk about your project</h3>
+                    <p class="contact-text">
+                        I'm currently looking for new opportunities in software, web and systems development. 
+                        Whether you have a question or just want to say hi, I'll get back to you as soon as possible!
+                    </p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-detail">
+                                <span>Email</span>
+                                <a href="mailto:mrsandilenyathi@gmail.com">mrsandilenyathi@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-detail">
+                                <span>Phone</span>
+                                <a href="tel:+27814048821">(+27)81 404 8821</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-detail">
+                                <span>Location</span>
+                                <span>Brakpan North, GP, South Africa</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-social">
+                        <a href="https://github.com/SAH28U" target="_blank" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/sandile-nyathi-a2ab7130b" target="_blank" class="social-link">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                
+                    </div>
+                </div>
+                
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" name="name" id="name" placeholder="Your Name" required>
+                        <span class="error-message" id="nameError"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" id="email" placeholder="Your Email" required>
+                        <span class="error-message" id="emailError"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="subject" id="subject" placeholder="Subject" required>
+                        <span class="error-message" id="subjectError"></span>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" id="message" placeholder="Your Message" required></textarea>
+                        <span class="error-message" id="messageError"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="submitBtn">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                    <div id="formMessage" class="form-message"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="#" class="logo">
+                        <i class="fas fa-code"></i> Sandile Nyathi<span>.</span>
+                    </a>
+                    <p>Full Stack Developer & Cloud Specialist</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3 class="footer-title">Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> mrsandilenyathi@gmail.com</li>
+                        <li><i class="fas fa-phone"></i> (+27)81 404 8821</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Brakpan North, GP</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> Sandile Nyathi. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="https://github.com/SAH28U" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/sandile-nyathi-a2ab7130b" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top">   
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <i class="fas fa-moon"></i>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
