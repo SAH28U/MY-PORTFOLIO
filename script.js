@@ -5,16 +5,34 @@
 })();
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Preloader
+// ===== PRELOADER WITH WELCOME MESSAGE =====
+window.addEventListener('load', function() {
     const preloader = document.querySelector('.preloader');
-    if (preloader) {
-        window.addEventListener('load', () => {
-            preloader.classList.add('fade-out');
-            setTimeout(() => {
-                preloader.style.display = 'none';
-            }, 500);
-        });
-    }
+    
+    // Wait a bit to show the welcome message (optional)
+    setTimeout(function() {
+        preloader.classList.add('fade-out');
+        
+        // Remove preloader from DOM after animation
+        setTimeout(function() {
+            preloader.style.display = 'none';
+        }, 800);
+    }, 2500); // Shows welcome message for 2.5 seconds
+});
+
+// Alternative: Progress bar simulation (if using progress bar)
+if (document.querySelector('.preloader-progress-bar')) {
+    let progress = 0;
+    const progressBar = document.querySelector('.preloader-progress-bar');
+    const interval = setInterval(function() {
+        progress += 10;
+        if (progress <= 100) {
+            progressBar.style.width = progress + '%';
+        } else {
+            clearInterval(interval);
+        }
+    }, 200);
+}
 
     // Cursor Effect
     const cursor = document.querySelector('.cursor');
@@ -655,4 +673,102 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     console.log('Portfolio initialized successfully!');
+});
+// ===== TESTIMONIALS SLIDER =====
+document.addEventListener('DOMContentLoaded', function() {
+    const testimonials = document.querySelectorAll('.testimonial-card');
+    const prevBtn = document.querySelector('.testimonial-prev');
+    const nextBtn = document.querySelector('.testimonial-next');
+    const dots = document.querySelectorAll('.dot');
+    let currentIndex = 0;
+    let intervalId;
+    const autoPlayDelay = 5000; // 5 seconds
+
+    // Function to show testimonial
+    function showTestimonial(index) {
+        // Handle wrap around
+        if (index < 0) index = testimonials.length - 1;
+        if (index >= testimonials.length) index = 0;
+        
+        // Remove active class from all testimonials and dots
+        testimonials.forEach(testimonial => {
+            testimonial.classList.remove('active');
+        });
+        dots.forEach(dot => {
+            dot.classList.remove('active');
+        });
+        
+        // Add active class to current testimonial and dot
+        testimonials[index].classList.add('active');
+        dots[index].classList.add('active');
+        
+        currentIndex = index;
+    }
+
+    // Next testimonial
+    function nextTestimonial() {
+        showTestimonial(currentIndex + 1);
+    }
+
+    // Previous testimonial
+    function prevTestimonial() {
+        showTestimonial(currentIndex - 1);
+    }
+
+    // Start autoplay
+    function startAutoPlay() {
+        intervalId = setInterval(nextTestimonial, autoPlayDelay);
+    }
+
+    // Stop autoplay
+    function stopAutoPlay() {
+        clearInterval(intervalId);
+    }
+
+    // Event listeners for buttons
+    if (prevBtn && nextBtn) {
+        prevBtn.addEventListener('click', function() {
+            prevTestimonial();
+            stopAutoPlay();
+            startAutoPlay(); // Restart autoplay after manual navigation
+        });
+
+        nextBtn.addEventListener('click', function() {
+            nextTestimonial();
+            stopAutoPlay();
+            startAutoPlay(); // Restart autoplay after manual navigation
+        });
+    }
+
+    // Event listeners for dots
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', function() {
+            showTestimonial(index);
+            stopAutoPlay();
+            startAutoPlay(); // Restart autoplay after manual navigation
+        });
+    });
+
+    // Pause autoplay when hovering over testimonials
+    const sliderContainer = document.querySelector('.testimonials-slider-container');
+    if (sliderContainer) {
+        sliderContainer.addEventListener('mouseenter', stopAutoPlay);
+        sliderContainer.addEventListener('mouseleave', startAutoPlay);
+    }
+
+    // Start autoplay
+    startAutoPlay();
+
+    // Keyboard navigation
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'ArrowLeft') {
+            prevTestimonial();
+            stopAutoPlay();
+            startAutoPlay();
+        } else if (e.key === 'ArrowRight') {
+            nextTestimonial();
+            stopAutoPlay();
+            startAutoPlay();
+        }
+    });
 });
