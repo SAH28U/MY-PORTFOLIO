@@ -24,15 +24,34 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     
     <!-- EmailJS -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 <body>
-    <!-- Preloader -->
-    <div class="preloader">
-        <div class="loader"></div>
+<!-- Preloader -->
+<div class="preloader">
+    <div class="preloader-content">
+        <div class="preloader-text">
+            <span class="preloader-word">Welcome</span>
+            <span class="preloader-word">to</span>
+            <span class="preloader-word">my</span>
+            <span class="preloader-word">portfolio</span>
+        </div>
+        
+        <div class="preloader-name">
+            SANDILE NYATHI
+        </div>
+        
+        <!-- Professional loader dots -->
+        <div class="professional-loader">
+            <div class="loader-dot"></div>
+            <div class="loader-dot"></div>
+            <div class="loader-dot"></div>
+        </div>
     </div>
+</div>
 
     <!-- Cursor Effect -->
     <div class="cursor"></div>
@@ -42,8 +61,8 @@
     <header class="header">
         <div class="container">
             <nav class="navbar">
-                <a href="#" class="logo">
-                    <i class="fas fa-code"></i> SN<span>.</span>
+                <a href="index.html" class="logo">
+                    <img src="daddd.png" alt="Sandile Nyathi Logo">
                 </a>
                 
                 <div class="hamburger">
@@ -68,16 +87,15 @@
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
-                <h4 class="subtitle animate__animated animate__fadeInUp">Hi, my name is</h4>
+                <h4 class="subtitle animate__animated animate__fadeInUp">Hi, My Name Is</h4>
                 <h1 class="title animate__animated animate__fadeInUp animate__delay-1s">Sandile Nyathi</h1>
-                <h2 class="role animate__animated animate__fadeInUp animate__delay-2s">I build things for the Web & Mobile</h2>
+                <h2 class="role animate__animated animate__fadeInUp animate__delay-2s">I Plan, Develop & Innovate Web & Mobile Applications</h2>
                 <p class="description animate__animated animate__fadeInUp animate__delay-3s">
-                   I'm a full-stack developer specializing in building exceptional digital experiences, currently focused on Website, Applications creation and cloud solutions. 
-                   Also skilled as a Software Engineer and Systems Developer, as well as a Project Analyst and Co-ordinator.
+                   I am a 23-year-old who is passionate about developing innovative solutions, optimizing system performance, and continuously expanding my technical knowledge. 
+                   As a quick learner and problem solver, I thrive in collaborative environments and am continuously eager to contribute to forward-thinking tech projects.
                 </p>
                 <div class="hero-cta animate__animated animate__fadeInUp animate__delay-4s">
-                    <a href="#projects" class="btn btn-primary">View My Work</a>
-                    <a href="#contact" class="btn btn-outline">Contact Me</a>
+                    <a href="#about" class="btn btn-primary">View More</a>
                 </div>
             </div>
             
@@ -89,8 +107,8 @@
                         <i class="fab fa-css3-alt" style="--i:1"></i>
                         <i class="fab fa-js" style="--i:2"></i>
                         <i class="fab fa-angular" style="--i:3"></i>
-                        <i class="fab fa-java" style="--i:4"></i>
-                        <i class="fas fa-cloud" style="--i:5"></i>
+                        <i class="devicon-oracle-original colored"></i>
+
                     </div>
                 </div>
             </div>
@@ -118,20 +136,12 @@
                 </div>
                 
                 <div class="about-info">
-                    <h3 class="about-title">I'm Sandile Nyathi, a Full Stack Developer & Cloud Specialist</h3>
+                    <h3 class="about-title">I'm Sandile Nyathi</h3>
+                    <h5 class="about-subtitle">Full Stack Developer || Systems Support Engineer || Mobile Application & Designs || Web Development & Mastering</h5>
                     <p class="about-text">
-                        Results-driven Software Developer currently leading projects at House of Grace as Project Lead Developer. 
-                        I specialize in full-stack web and mobile application development, with expertise in cloud infrastructure 
-                        backed by CompTIA Cloud+, A+, and Security+ certifications.
-                    </p>
-                    <p class="about-text">
-                        My technical stack includes Java, C#, JavaScript, Angular, and mobile development. 
-                        I combine technical proficiency with strong problem-solving skills to deliver high-quality solutions 
-                        that streamline processes and enhance user experiences.
-                    </p>
-                    <p class="about-text">
-                        Available for immediate opportunities where I can contribute innovative solutions and technical expertise 
-                        to build impactful digital experiences.
+                        "I'm a Full Stack Developer and Systems Support Engineer who builds resilient, user-centric applications from concept to deployment. 
+                        My foundation in systems engineering means I write code that is not only sleek and intuitive but also secure, maintainable, and built to scale. 
+                        Whether designing mobile interfaces or managing backend logic, I bridge the gap between creative design and technical infrastructure to deliver seamless digital experiences."
                     </p>
                     
                     <div class="about-tabs">
@@ -140,17 +150,17 @@
                         <button class="tab-btn" data-tab="certifications">Certifications</button>
                     </div>
                     
-                    <div class="tab-content active" data-tab="education">
+                    <div class="tab-content active" id="education" data-tab="education">
                         <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-date">2024 - 2025</div>
+                                <h4 class="timeline-title">SoloLearn Online Institute</h4>
+                                <p class="timeline-text">Alison & SoloLearn</p>
+                            </div>
                             <div class="timeline-item">
                                 <div class="timeline-date">2022 - 2025</div>
                                 <h4 class="timeline-title">Diploma in Information Technology</h4>
                                 <p class="timeline-text">Richfield Graduate Institute of Technology</p>
-                            </div>
-                            <div class="timeline-item">
-                                <div class="timeline-date">2024 - 2025</div>
-                                <h4 class="timeline-title">Online Learning</h4>
-                                <p class="timeline-text">Alison & SoloLearn</p>
                             </div>
                             <div class="timeline-item">
                                 <div class="timeline-date">2016 - 2021</div>
@@ -160,36 +170,32 @@
                         </div>
                     </div>
                     
-                    <div class="tab-content" data-tab="experience">
+                    <div class="tab-content" id="experience" data-tab="experience">
                         <div class="timeline">
                             <div class="timeline-item">
-                                <div class="timeline-date">Apr - Present </div>
+                                <div class="timeline-date">Apr 2025 - Present</div>
                                 <h4 class="timeline-title">Project Lead Developer</h4>
                                 <p class="timeline-text">House of Grace (Property Consortium)</p>
-                                <p class="timeline-details">
-                                    Providing consultations and leading key responsibilities on web and applicational developments. 
-                                    Maintaining existing web and app developments. Populating and providing key business points from an IT development perspective. 
-                                    Laising with Owners on cost-effective methods on existing projects and future projects.
-                                </p>
+                                <ul class="certification-list" style="margin-top: 10px;">
+                                    <li>Providing consultations and leading key responsibilities on web and application development.</li>
+                                    <li>Execute administrative duties in the establishment of IT Department goals, objectives, and operating procedures.</li>
+                                    <li>Maintaining existing API and product interfaces.</li>
+                                    <li>Liaising with the executive board on cost-effective methods on existing projects and future projects.</li>
+                                </ul>
                             </div>
                             <div class="timeline-item">
-                                <div class="timeline-date">Jan - Mar 2025</div>
+                                <div class="timeline-date">Jan 2025 - Mar 2025</div>
                                 <h4 class="timeline-title">Call Centre Agent (WIL)</h4>
                                 <p class="timeline-text">Richfield Graduate Institute of Technology</p>
-                                <p class="timeline-details">
-                                    Conducted outbound calls to existing students, reminding them of outstanding balances and providing guidance on payment procedures. 
-                                    Engaged with students regarding articulation opportunities, offering clear explanations about available campus programs and pathways.
-                                </p>
-                            </div>
-                            <div class="timeline-item">
-                                <div class="timeline-date">2023 - Present</div>
-                                <h4 class="timeline-title">Freelance Developer</h4>
-                                <p class="timeline-text">Building Websites and solutions for clients</p>
+                                <ul class="certification-list" style="margin-top: 10px;">
+                                    <li>Conducted outbound calls to existing students, reminding them of outstanding balances and providing guidance on payment procedures.</li>
+                                    <li>Engaged with students regarding articulation opportunities, offering clear explanations about available campus programs and pathways.</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="tab-content" data-tab="certifications">
+                    <div class="tab-content" id="certifications" data-tab="certifications">
                         <ul class="certification-list">
                             <li>CompTIA Cloud+</li>
                             <li>CompTIA A+</li>
@@ -203,10 +209,7 @@
                     </div>
                     
                     <div class="download-buttons">
-                        <a href="Sandile Nyathi_CV.pdf" class="btn btn-primary download-cv" download="Sandile-Nyathi-CV.pdf">
-                            <i class="fas fa-download"></i> Download My CV
-                        </a>
-                        <a href="All Qualifications.pdf" class="btn btn-primary download-Qualifications" download="Sandile-Nyathi-Qualifications.pdf">
+                        <a href="All Qualifications.pdf" class="btn btn-primary download-qualifications" download="Sandile-Nyathi-Qualifications.pdf">
                             <i class="fas fa-download"></i> Download My Certifications
                         </a>
                     </div>
@@ -214,63 +217,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Services Section -->
-    <section id="services" class="services section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">My Services</h2>
-                <span class="section-subtitle">What I offer</span>
-            </div>
-            
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <h3 class="service-title">Web Development</h3>
-                    <p class="service-description">
-                        Custom web applications built with modern technologies like Angular. 
-                        Responsive design and optimized performance.
-                    </p>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-cloud"></i>
-                    </div>
-                    <h3 class="service-title">Cloud Solutions</h3>
-                    <p class="service-description">
-                        Cloud infrastructure setup, deployment, and management. 
-                        Expertise in cloud security, scalability, and cost optimization.
-                    </p>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
-                    <h3 class="service-title">Mobile Development</h3>
-                    <p class="service-description">
-                        Cross-platform mobile applications using modern frameworks. 
-                        Native-like performance with responsive design.
-                    </p>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-database"></i>
-                    </div>
-                    <h3 class="service-title">Database Design</h3>
-                    <p class="service-description">
-                        Efficient database architecture and optimization. 
-                        SQL solutions tailored to your application needs.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Skills Section -->
     <section id="skills" class="skills section">
         <div class="container">
@@ -419,6 +365,74 @@
             </div>
         </div>
     </section>
+    <!-- Services Section -->
+    <section id="services" class="services section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">My Services</h2>
+                <span class="section-subtitle">What I offer</span>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="service-title">Web Development</h3>
+                    <p class="service-description">
+                        Custom web applications built with modern technologies like Angular. 
+                        Responsive design and optimized performance.
+                    </p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="service-title">Mobile Application Development</h3>
+                    <p class="service-description">
+                        Cross-platform mobile applications using modern frameworks. 
+                        Native-like performance with responsive design.
+                    </p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3 class="service-title">Structured Database Design</h3>
+                    <p class="service-description">
+                        Efficient database architecture and optimization. 
+                        SQL solutions tailored to your application needs.
+                    </p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3 class="service-title">IT Consultant</h3>
+                    <p class="service-description">
+                        Strategic IT consulting services focused on system optimization, infrastructure planning, 
+                        and database management. 
+                        Providing tailored technology solutions that improve efficiency, 
+                        scalability, and overall business performance.
+                    </p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                    <i class="fas fa-paint-brush"></i>
+                </div>
+                <h3 class="service-title">Graphic Design</h3>
+                    <p class="service-description">
+                        Creative and visually compelling design solutions tailored to elevate your brand. 
+                        Specializing in logos, marketing materials, social media graphics, and modern UI visuals 
+                        that communicate your message clearly and professionally.
+                    </p>
+                </div>
+                <a href="#contact" class="btn btn-outline">Contact Me</a>
+            </div>
+        </div>
+    </section>
 
     <!-- Projects Section -->
     <section id="projects" class="projects section">
@@ -429,16 +443,15 @@
             </div>
             
             <div class="project-filter">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="web">Web</button>
-                <button class="filter-btn" data-filter="app">Applications</button>
-                <button class="filter-btn" data-filter="cloud">Cloud</button>
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+
+
             </div>
             
             <div class="projects-grid">
-                <div class="project-card" data-category="web">
+                <div class="project-card" data-category="All Projects">
                     <div class="project-image">
-                        <img src="SHOP.PNG" alt="E-commerce Website">
+                        <img src="XC.png" alt="E-commerce Website">
                         <div class="project-overlay">
                             <a href="https://sah28u.github.io/NyathiClothingXpress/" target="_blank" class="project-link">
                                 <i class="fas fa-external-link-alt"></i>
@@ -461,14 +474,67 @@
                             <a href="https://sah28u.github.io/NyathiClothingXpress/" target="_blank" class="btn btn-small">
                                 <i class="fas fa-eye"></i> Demo
                             </a>
-                            <a href="https://github.com/SAH28U/NyathiClothingXpress" target="_blank" class="btn btn-small btn-outline">
-                                <i class="fab fa-github"></i> Code
-                            </a>
                         </div>
                     </div>
                 </div>
                 
-                <div class="project-card" data-category="web">
+                <div class="project-card" data-category="All Projects">
+                    <div class="project-image">
+                        <img src="SAMI LOGO.jpg" alt="Beauty Website">
+                        <div class="project-overlay">
+                            <a href="#" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Beauty Website</h3>
+                        <p class="project-description">
+                            A landing page interface that uses basic programing and optimization.
+                        </p>
+                        <div class="project-tech">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JAVASCRIPT</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://sah28u.github.io/SAMI/" target="_blank" class="btn btn-small">
+                                <i class="fas fa-eye"></i> Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                                <div class="project-card" data-category="All Projects">
+                    <div class="project-image">
+                        <img src="JO.png" alt="Burger Website">
+                        <div class="project-overlay">
+                            <a href="#" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Burger Website</h3>
+                        <p class="project-description">
+                            Full-stack e-commerce site for a Diner Resturant that utilizes both front & back-end interfaces
+                        </p>
+                        <div class="project-tech">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JAVASCRIPT</span>
+                            <span>MySQL</span>
+                            <span>PHP</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://sah28u.github.io/BURGR-JOINT/" target="_blank" class="btn btn-small">
+                                <i class="fas fa-eye"></i> Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="All Projects">
                     <div class="project-image">
                         <img src="da.PNG" alt="Church Website">
                         <div class="project-overlay">
@@ -491,14 +557,11 @@
                             <a href="https://sah28u.github.io/Temple-Of-Faith/" target="_blank" class="btn btn-small">
                                 <i class="fas fa-eye"></i> Demo
                             </a>
-                            <a href="https://github.com/SAH28U/Temple-Of-Faith" target="_blank" class="btn btn-small btn-outline">
-                                <i class="fab fa-github"></i> Code
-                            </a>
                         </div>
                     </div>
                 </div>
                 
-                <div class="project-card" data-category="web">
+                <div class="project-card" data-category="All Projects">
                     <div class="project-image">
                         <img src="scoo.jpeg" alt="School Website">
                         <div class="project-overlay">
@@ -521,16 +584,13 @@
                             <a href="https://sah28u.github.io/Brakpan-Educational-Centre/" target="_blank" class="btn btn-small">
                                 <i class="fas fa-eye"></i> Demo
                             </a>
-                            <a href="https://github.com/SAH28U/Brakpan-Educational-Centre" target="_blank" class="btn btn-small btn-outline">
-                                <i class="fab fa-github"></i> Code
-                            </a>
                         </div>
                     </div>
                 </div>
 
-                <div class="project-card" data-category="web">
+                <div class="project-card" data-category="All Projects">
                     <div class="project-image">
-                        <img src="NOTTT.PNG" alt="To-Do Notepad">
+                        <img src="SC.png" alt="To-Do Notepad">
                         <div class="project-overlay">
                             <a href="https://sah28u.github.io/To-Do-NotePad/" target="_blank" class="project-link">
                                 <i class="fas fa-external-link-alt"></i>
@@ -551,52 +611,29 @@
                             <a href="https://sah28u.github.io/To-Do-NotePad/" target="_blank" class="btn btn-small">
                                 <i class="fas fa-eye"></i> Demo
                             </a>
-                            <a href="https://github.com/SAH28U/To-Do-NotePad" target="_blank" class="btn btn-small btn-outline">
-                                <i class="fab fa-github"></i> Code
-                            </a>
                         </div>
                     </div>
-                </div>
-                
-                </div>
-            </div>
-            
-            <div class="github-stats">
-                <div class="github-card">
-                    <i class="fab fa-github"></i>
-                    <h3>My GitHub Activity</h3>
-                    <div class="stats-grid">
-                        <div class="stat-item">
-                            <span class="stat-number" data-target="5">0</span>
-                            <span class="stat-label">Repositories</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number" data-target="5">0</span>
-                            <span class="stat-label">Commits</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number" data-target="5">0</span>
-                            <span class="stat-label">Projects</span>
-                        </div>
-                    </div>
-                    <a href="https://github.com/SAH28U" target="_blank" class="btn btn-outline">
-                        <i class="fab fa-github"></i> View Profile
-                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section class="testimonials section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Testimonials</h2>
-                <span class="section-subtitle">What clients say</span>
-            </div>
+<!-- Testimonials Section -->
+<section id="testimonials" class="testimonials section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Testimonials</h2>
+            <span class="section-subtitle">What clients say</span>
+        </div>
+        
+        <div class="testimonials-slider-container">
+            <button class="testimonial-nav testimonial-prev">
+                <i class="fas fa-chevron-left"></i>
+            </button>
             
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
+            <div class="testimonials-slider">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card active">
                     <div class="testimonial-content">
                         "Sandile delivered an exceptional e-commerce solution for our business. His attention to detail and technical expertise exceeded our expectations."
                     </div>
@@ -611,6 +648,7 @@
                     </div>
                 </div>
                 
+                <!-- Testimonial 2 -->
                 <div class="testimonial-card">
                     <div class="testimonial-content">
                         "Working with Sandile was a great experience. He transformed our complex requirements into a user-friendly application with excellent performance."
@@ -626,26 +664,88 @@
                     </div>
                 </div>
                 
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        "Sandile delivered an exceptional website for our church that perfectly captures our mission and values. His attention to detail and technical expertise transformed our online presence. The site is not only visually appealing but also highly functional, making it easy for our congregation to stay connected and access resources."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="FMAL.jpg" alt="Mr T.E Twala">
+                        </div>
+                        <div class="author-info">
+                            <h4>Mr T.E TWALA</h4>
+                            <p>Founder & Owner, Community Church</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 4 (New) -->
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        "Sandile's technical expertise and problem-solving skills are outstanding. He helped us optimize our database architecture, resulting in a 40% performance improvement. A true professional who delivers results."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="MAL.jpg" alt="Client">
+                        </div>
+                        <div class="author-info">
+                            <h4>Mr. Michael Chen</h4>
+                            <p>CTO, TechStart Solutions</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 5 (New) -->
 <div class="testimonial-card">
     <div class="testimonial-content">
-        "Sandile delivered an exceptional website for our church that perfectly captures our mission and values. 
-        His attention to detail and technical expertise transformed our online presence. 
-        The site is not only visually appealing but also highly functional, making it easy for our congregation to stay connected and access resources. 
-        His professionalism and commitment to excellence made the entire process seamless."
+        "Working with Sandile on our SAMI product showcase was incredible. He understood exactly how to present our Turmeric Kojic Face & Body Oil, Scrub, and Soap collection. The way he highlighted our natural ingredients and brand philosophy on the website has significantly boosted our online sales."
     </div>
     <div class="testimonial-author">
         <div class="author-avatar">
-            <img src="FMAL.jpg" alt="Mr T.E Twala">
+            <img src="FMAL.jpg" alt="Client">
         </div>
         <div class="author-info">
-            <h4>Mr T.E TWALA</h4>
-            <p>Founder & Owner, Community Church</p>
+            <h4>Mrs Matsubane</h4>
+            <p>Founder, SAMI Natural Beauty</p>
         </div>
     </div>
 </div>
+                
+                <!-- Testimonial 6 (New) -->
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                    Sandile created an amazing digital presence for our restaurant, Burger Joint. 
+                    From a mouth-watering website that showcases our gourmet burgers to a seamless online ordering system, 
+                    he transformed how our customers interact with us. 
+                    Our online orders have increased by 200% since launch!"                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="MAL.jpg" alt="Client">
+                        </div>
+                        <div class="author-info">
+                            <h4>Mr. David Omondi</h4>
+                            <p>Manager, Burger Joint</p>
+                        </div>
+                    </div>
+                </div>
             </div>
+            
+            <button class="testimonial-nav testimonial-next">
+                <i class="fas fa-chevron-right"></i>
+            </button>
         </div>
-    </section>
+        
+        <div class="testimonial-dots">
+            <span class="dot active" data-index="0"></span>
+            <span class="dot" data-index="1"></span>
+            <span class="dot" data-index="2"></span>
+            <span class="dot" data-index="3"></span>
+            <span class="dot" data-index="4"></span>
+            <span class="dot" data-index="5"></span>
+        </div>
+    </div>
+</section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact section">
@@ -680,7 +780,7 @@
                             </div>
                             <div class="contact-detail">
                                 <span>Phone</span>
-                                <a href="tel:+27814048821">(+27)81 404 8821</a>
+                                <a href="tel:+27814048821">(+27) 81 404 8821</a>
                             </div>
                         </div>
                         
@@ -690,7 +790,7 @@
                             </div>
                             <div class="contact-detail">
                                 <span>Location</span>
-                                <span>Brakpan North, GP, South Africa</span>
+                                <span>29 Craven Street, Sherwood Gardens, Brakpan North.</span>
                             </div>
                         </div>
                     </div>
@@ -702,32 +802,14 @@
                         <a href="https://www.linkedin.com/in/sandile-nyathi-a2ab7130b" target="_blank" class="social-link">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
-                
+                        <a href="https://wa.me/27814048821" target="_blank" class="social-link">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="mailto:mrsandilenyathi@gmail.com" target="_blank" class="social-link">
+                            <i class="fas fa-envelope"></i>
+                        </a>
                     </div>
                 </div>
-                
-                <form class="contact-form" id="contactForm">
-                    <div class="form-group">
-                        <input type="text" name="name" id="name" placeholder="Your Name" required>
-                        <span class="error-message" id="nameError"></span>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" name="email" id="email" placeholder="Your Email" required>
-                        <span class="error-message" id="emailError"></span>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" name="subject" id="subject" placeholder="Subject" required>
-                        <span class="error-message" id="subjectError"></span>
-                    </div>
-                    <div class="form-group">
-                        <textarea name="message" id="message" placeholder="Your Message" required></textarea>
-                        <span class="error-message" id="messageError"></span>
-                    </div>
-                    <button type="submit" class="btn btn-primary" id="submitBtn">
-                        <i class="fas fa-paper-plane"></i> Send Message
-                    </button>
-                    <div id="formMessage" class="form-message"></div>
-                </form>
             </div>
         </div>
     </section>
@@ -740,7 +822,6 @@
                     <a href="#" class="logo">
                         <i class="fas fa-code"></i> Sandile Nyathi<span>.</span>
                     </a>
-                    <p>Full Stack Developer & Cloud Specialist</p>
                 </div>
                 
                 <div class="footer-links">
@@ -759,14 +840,14 @@
                     <h3 class="footer-title">Contact Info</h3>
                     <ul>
                         <li><i class="fas fa-envelope"></i> mrsandilenyathi@gmail.com</li>
-                        <li><i class="fas fa-phone"></i> (+27)81 404 8821</li>
-                        <li><i class="fas fa-map-marker-alt"></i> Brakpan North, GP</li>
+                        <li><i class="fas fa-phone"></i> (+27) 81 404 8821</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 29 Craven Street, Sherwood Gardens, Brakpan North.</li>
                     </ul>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; <span id="year"></span> Sandile Nyathi. All rights reserved.</p>
+                <p>&copy; <span id="year"></span> Copyright to Sandile Nyathi. All rights reserved.</p>
                 <div class="footer-social">
                     <a href="https://github.com/SAH28U" target="_blank"><i class="fab fa-github"></i></a>
                     <a href="https://www.linkedin.com/in/sandile-nyathi-a2ab7130b" target="_blank"><i class="fab fa-linkedin-in"></i></a>
@@ -787,6 +868,4 @@
 
     <script src="script.js"></script>
 </body>
-
 </html>
-
