@@ -1305,11 +1305,16 @@ img {
 }
 
 /* ===== SERVICES SECTION ===== */
+.services {
+    position: relative;
+    background: var(--light);
+}
+
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2.5rem;
 }
 
 .service-card {
@@ -1321,6 +1326,9 @@ img {
     transition: var(--transition);
     position: relative;
     overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .dark-theme .service-card {
@@ -1360,26 +1368,237 @@ img {
     margin: 0 auto 1.5rem;
     font-size: 1.8rem;
     color: white;
+    transition: var(--transition);
+}
+
+.service-card:hover .service-icon {
+    transform: scale(1.1) rotate(5deg);
 }
 
 .service-title {
     font-size: 1.3rem;
     margin-bottom: 1rem;
+    color: var(--dark);
 }
 
 .service-description {
     color: var(--gray);
     line-height: 1.6;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
 }
 
-/* Center the Contact Me button in services */
-.services .btn-outline {
+/* Professional Contact Me Button Container */
+.services .services-cta {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: fit-content;
-    margin: 0 auto;
-    padding: 0.9rem 2.5rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+}
+
+/* Smaller, Professional Contact Me Button */
+.services .btn-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.7rem 1.8rem;  /* Smaller padding */
+    font-size: 0.95rem;        /* Smaller font */
+    font-weight: 500;
+    border-radius: 50px;       /* Pill shape for modern look */
+    background-color: transparent;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    transition: var(--transition);
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    letter-spacing: 0.3px;
+    min-width: 140px;          /* Fixed minimum width */
+}
+
+/* Button hover effect */
+.services .btn-outline:hover {
+    background: var(--gradient);
+    border-color: transparent;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(99, 102, 241, 0.3);
+}
+
+/* Button active state */
+.services .btn-outline:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 15px rgba(99, 102, 241, 0.4);
+}
+
+/* Button icon styling */
+.services .btn-outline i {
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.services .btn-outline:hover i {
+    transform: translateX(3px);
+}
+
+/* Optional: Add a subtle pulse animation */
+.services .btn-outline::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+    z-index: -1;
+}
+/* ===== SERVICES SECTION - CONTACT BUTTON FIX ===== */
+.services-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2.5rem;
+    padding-top: 1rem;
+    width: 100%;
+}
+
+.services-contact-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    padding: 0.7rem 2rem;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3);
+    min-width: 160px;
+    letter-spacing: 0.3px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.services-contact-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--secondary), var(--primary));
+    transition: left 0.4s ease;
+    z-index: -1;
+}
+
+.services-contact-btn:hover::before {
+    left: 0;
+}
+
+.services-contact-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(99, 102, 241, 0.5);
+}
+
+.services-contact-btn i {
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.services-contact-btn:hover i {
+    transform: translateX(5px);
+}
+
+/* Dark theme support */
+.dark-theme .services-contact-btn {
+    box-shadow: 0 8px 20px rgba(99, 102, 241, 0.4);
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .services-contact-btn {
+        padding: 0.6rem 1.8rem;
+        font-size: 0.95rem;
+        min-width: 150px;
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .services-footer {
+        margin-top: 2rem;
+    }
+    
+    .services-contact-btn {
+        padding: 0.6rem 1.5rem;
+        font-size: 0.9rem;
+        min-width: 140px;
+        width: auto;
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .services-contact-btn {
+        width: 100%;
+        max-width: 250px;
+    }
+}
+
+/* Remove any conflicting styles */
+.services .btn-outline,
+.services .services-cta .btn-outline {
+    /* These styles are being overridden by the new button */
+    display: none;
+}
+.services .btn-outline:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+/* Dark theme adjustment */
+.dark-theme .services .btn-outline {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.dark-theme .services .btn-outline:hover {
+    color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .services .btn-outline {
+        padding: 0.6rem 1.5rem;
+        font-size: 0.9rem;
+        min-width: 130px;
+    }
+}
+
+@media (max-width: 576px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .services .btn-outline {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.85rem;
+        min-width: 120px;
+    }
 }
 
 /* ===== SKILLS SECTION ===== */
