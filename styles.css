@@ -1123,7 +1123,7 @@ img {
 
 .about-subtitle {
     font-size: 1.1rem;
-    color: var(--primary);
+    color: var(--gray);
     margin-bottom: 1.5rem;
     font-weight: 500;
 }
@@ -1728,6 +1728,7 @@ img {
     color: var(--gray);
 }
 
+/* ===== SKILLS CLOUD - FIXED ===== */
 .skills-cloud {
     position: relative;
     height: 500px;
@@ -1738,6 +1739,7 @@ img {
         radial-gradient(circle at 80% 20%, rgba(16, 185, 129, 0.1) 0%, transparent 50%),
         linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
     overflow: hidden;
+    position: relative;
 }
 
 .dark-theme .skills-cloud {
@@ -1749,23 +1751,92 @@ img {
 
 .cloud-tag {
     position: absolute;
-    padding: 0.8rem 1.5rem;
+    padding: 0.6rem 1.2rem;
     background: linear-gradient(135deg, 
         rgba(255, 255, 255, 0.95) 0%, 
         rgba(255, 255, 255, 0.85) 100%);
     color: var(--primary-dark);
     border: 2px solid rgba(99, 102, 241, 0.2);
     border-radius: 30px;
-    font-size: calc(1rem + 0.1 * var(--i));
-    font-weight: 700;
+    font-size: 0.9rem;
+    font-weight: 600;
     box-shadow: 0 8px 25px rgba(99, 102, 241, 0.15);
     animation: float 6s ease-in-out infinite;
-    animation-delay: calc(var(--i) * -0.5s);
     backdrop-filter: blur(10px);
     cursor: pointer;
     transition: var(--transition);
+    white-space: nowrap;
+    z-index: 1;
 }
 
+/* Individual tag positions - spread evenly */
+.cloud-tag:nth-child(1) { top: 10%; left: 10%; animation-delay: 0s; }
+.cloud-tag:nth-child(2) { top: 15%; left: 35%; animation-delay: 0.2s; }
+.cloud-tag:nth-child(3) { top: 8%; left: 65%; animation-delay: 0.4s; }
+.cloud-tag:nth-child(4) { top: 25%; left: 80%; animation-delay: 0.6s; }
+.cloud-tag:nth-child(5) { top: 30%; left: 15%; animation-delay: 0.8s; }
+.cloud-tag:nth-child(6) { top: 28%; left: 45%; animation-delay: 1s; }
+.cloud-tag:nth-child(7) { top: 35%; left: 70%; animation-delay: 1.2s; }
+.cloud-tag:nth-child(8) { top: 45%; left: 85%; animation-delay: 1.4s; }
+.cloud-tag:nth-child(9) { top: 50%; left: 10%; animation-delay: 1.6s; }
+.cloud-tag:nth-child(10) { top: 48%; left: 30%; animation-delay: 1.8s; }
+.cloud-tag:nth-child(11) { top: 52%; left: 55%; animation-delay: 2s; }
+.cloud-tag:nth-child(12) { top: 55%; left: 75%; animation-delay: 2.2s; }
+.cloud-tag:nth-child(13) { top: 65%; left: 20%; animation-delay: 2.4s; }
+.cloud-tag:nth-child(14) { top: 68%; left: 40%; animation-delay: 2.6s; }
+.cloud-tag:nth-child(15) { top: 72%; left: 60%; animation-delay: 2.8s; }
+.cloud-tag:nth-child(16) { top: 75%; left: 80%; animation-delay: 3s; }
+.cloud-tag:nth-child(17) { top: 82%; left: 15%; animation-delay: 3.2s; }
+.cloud-tag:nth-child(18) { top: 85%; left: 35%; animation-delay: 3.4s; }
+.cloud-tag:nth-child(19) { top: 88%; left: 55%; animation-delay: 3.6s; }
+.cloud-tag:nth-child(20) { top: 90%; left: 75%; animation-delay: 3.8s; }
+.cloud-tag:nth-child(21) { top: 18%; left: 90%; animation-delay: 4s; }
+.cloud-tag:nth-child(22) { top: 40%; left: 95%; animation-delay: 4.2s; }
+.cloud-tag:nth-child(23) { top: 60%; left: 5%; animation-delay: 4.4s; }
+.cloud-tag:nth-child(24) { top: 22%; left: 55%; animation-delay: 4.6s; }
+.cloud-tag:nth-child(25) { top: 38%; left: 25%; animation-delay: 4.8s; }
+.cloud-tag:nth-child(26) { top: 42%; left: 65%; animation-delay: 5s; }
+.cloud-tag:nth-child(27) { top: 58%; left: 45%; animation-delay: 5.2s; }
+.cloud-tag:nth-child(28) { top: 62%; left: 85%; animation-delay: 5.4s; }
+.cloud-tag:nth-child(29) { top: 78%; left: 50%; animation-delay: 5.6s; }
+.cloud-tag:nth-child(30) { top: 82%; left: 70%; animation-delay: 5.8s; }
+.cloud-tag:nth-child(31) { top: 45%; left: 40%; animation-delay: 6s; }
+.cloud-tag:nth-child(32) { top: 12%; left: 20%; animation-delay: 6.2s; }
+.cloud-tag:nth-child(33) { top: 70%; left: 30%; animation-delay: 6.4s; }
+.cloud-tag:nth-child(34) { top: 25%; left: 60%; animation-delay: 6.6s; }
+.cloud-tag:nth-child(35) { top: 32%; left: 50%; animation-delay: 6.8s; }
+.cloud-tag:nth-child(36) { top: 48%; left: 75%; animation-delay: 7s; }
+.cloud-tag:nth-child(37) { top: 55%; left: 90%; animation-delay: 7.2s; }
+.cloud-tag:nth-child(38) { top: 68%; left: 10%; animation-delay: 7.4s; }
+.cloud-tag:nth-child(39) { top: 72%; left: 95%; animation-delay: 7.6s; }
+.cloud-tag:nth-child(40) { top: 85%; left: 45%; animation-delay: 7.8s; }
+.cloud-tag:nth-child(41) { top: 15%; left: 75%; animation-delay: 8s; }
+.cloud-tag:nth-child(42) { top: 20%; left: 40%; animation-delay: 8.2s; }
+.cloud-tag:nth-child(43) { top: 88%; left: 85%; animation-delay: 8.4s; }
+.cloud-tag:nth-child(44) { top: 92%; left: 20%; animation-delay: 8.6s; }
+.cloud-tag:nth-child(45) { top: 8%; left: 50%; animation-delay: 8.8s; }
+.cloud-tag:nth-child(46) { top: 95%; left: 60%; animation-delay: 9s; }
+
+/* Add hover effects */
+.cloud-tag:hover {
+    background: var(--gradient);
+    color: white;
+    border-color: transparent;
+    transform: scale(1.1);
+    z-index: 10;
+    box-shadow: 0 12px 30px rgba(99, 102, 241, 0.3);
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+/* Dark theme adjustments */
 .dark-theme .cloud-tag {
     background: linear-gradient(135deg, 
         rgba(30, 41, 59, 0.95) 0%, 
@@ -1774,31 +1845,32 @@ img {
     border: 2px solid rgba(99, 102, 241, 0.3);
 }
 
-.cloud-tag:hover {
-    background: var(--gradient);
-    color: white;
-    border-color: transparent;
-    transform: scale(1.2);
-    z-index: 10;
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .skills-cloud {
+        height: 400px;
+    }
+    
+    .cloud-tag {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+    }
 }
 
-.cloud-tag:nth-child(1) { top: 20%; left: 30%; }
-.cloud-tag:nth-child(2) { top: 30%; left: 60%; }
-.cloud-tag:nth-child(3) { top: 45%; left: 20%; }
-.cloud-tag:nth-child(4) { top: 50%; left: 70%; }
-.cloud-tag:nth-child(5) { top: 65%; left: 35%; }
-.cloud-tag:nth-child(6) { top: 70%; left: 55%; }
-.cloud-tag:nth-child(7) { top: 25%; left: 45%; }
-.cloud-tag:nth-child(8) { top: 60%; left: 45%; }
-.cloud-tag:nth-child(9) { top: 40%; left: 50%; }
-.cloud-tag:nth-child(10) { top: 80%; left: 40%; }
-
-@keyframes float {
-    0%, 100% {
-        transform: translateY(0);
+@media (max-width: 768px) {
+    .skills-cloud {
+        height: 350px;
     }
-    50% {
-        transform: translateY(-20px);
+}
+
+@media (max-width: 576px) {
+    .skills-cloud {
+        height: 300px;
+    }
+    
+    .cloud-tag {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.7rem;
     }
 }
 
