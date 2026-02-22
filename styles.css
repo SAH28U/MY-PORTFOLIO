@@ -1674,14 +1674,41 @@ img {
     transition: width 1.5s ease;
 }
 
+/* Update the professional skills grid to accommodate 8 items */
 .professional-skills {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
+    margin-top: 2rem;
 }
 
+/* Responsive adjustments for the new layout */
+@media (max-width: 992px) {
+    .professional-skills {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .professional-skills {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .professional-skills {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+/* Ensure circle containers maintain proper sizing */
 .skill-circle {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .circle-progress {
@@ -1724,8 +1751,17 @@ img {
 }
 
 .circle-title {
-    font-size: 1rem;
+    font-size: 0.95rem;
     color: var(--gray);
+    margin-top: 0.5rem;
+    line-height: 1.4;
+    max-width: 120px;
+    text-align: center;
+}
+
+/* Dark theme support */
+.dark-theme .circle-title {
+    color: var(--gray-light);
 }
 
 /* ===== SKILLS CLOUD - FIXED ===== */
